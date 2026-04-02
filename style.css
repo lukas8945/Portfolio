@@ -330,6 +330,15 @@ section:nth-child(even) {
     font-size: 1.1rem;
 }
 
+.doc-placeholder {
+    border: 1px dashed var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: var(--text-secondary);
+    background: var(--darker-bg);
+    text-align: center;
+}
+
 .context-box {
     background: var(--darker-bg);
     padding: 1.5rem;
