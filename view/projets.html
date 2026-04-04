@@ -1,69 +1,65 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets | Portfolio E4 - Lucas DOYEN-HERVE</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-    <div class="loading-animation">
-        <div class="spinner"></div>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projets | Portfolio E4 - Lucas DOYEN-HERVE</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <div class="loading-animation"><div class="spinner"></div></div>
 
-    <nav>
-        <div class="nav-container">
-            <div class="logo">Portfolio E4 - Lucas DOYEN-HERVE</div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="missions.html">Fiches Missions</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main>
-    <section id="projets">
-        <div class="container">
-            <h2 class="section-title">Projets professionnels</h2>
-            <p class="section-intro">Projets présentés durant l'épreuve et en entreprise, avec un espace réservé pour les dossiers techniques.</p>
-
-            <div class="missions-grid projets-list">
-
-                <article class="mission-card">
-                    <div class="mission-header">
-                        <div class="mission-icon">P1</div>
-                        <div>
-                            <h3>Projet 1 : Réseaux VPN</h3>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="mission-card">
-                    <div class="mission-header">
-                        <div class="mission-icon">P2</div>
-                        <div>
-                            <h3>Projet 2 : System GLPI</h3>
-                        </div>
-                    </div>
-                
-                </article>
-
+        <nav>
+            <div class="nav-container">
+                <div class="logo">Portfolio</div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="missions.html">Fiches Missions</a></li>
+                    <li><a href="projets.html" class="active">Projets</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-        </div>
-    </section>
-    </main>
+        </nav>
 
-    <script src="../script.js"></script>
-</body>
+        <main>
+            <div class="page-header">
+                <h2>Projets professionnels</h2>
+                <p>Projets présentés durant l'épreuve et en entreprise, avec les dossiers techniques disponibles en téléchargement.</p>
+            </div>
+
+            <div class="projet-card">
+                <div class="projet-header">
+                    <span class="projet-badge">P1</span>
+                    <h3>Projet 1 : Réseaux VPN</h3>
+                </div>
+                <a class="doc-link" href="../docs/Procédure_VPN.docx" download>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Télécharger la procédure VPN
+                </a>
+            </div>
+
+            <div class="projet-card">
+                <div class="projet-header">
+                    <span class="projet-badge">P2</span>
+                    <h3>Projet 2 : System GLPI</h3>
+                </div>
+                <a class="doc-link" href="../docs/Procédure_GLPI.docx" download>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Télécharger la procédure GLPI
+                </a>
+            </div>
+        </main>
+
+        <script src="../script.js"></script>
+    </body>
 </html>
-
-
-
-
-
-
-
-
-
