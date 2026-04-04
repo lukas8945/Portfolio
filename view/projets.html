@@ -1,10 +1,35 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets | Portfolio E4 - Lucas DOYEN-HERVE</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .doc-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+            padding: 0.7rem 1.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid var(--primary-color);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        .doc-download-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59,130,246,0.3);
+        }
+        .mission-content {
+            padding: 2rem;
+        }
+    </style>
 </head>
 <body>
     <div class="loading-animation">
@@ -38,6 +63,13 @@
                             <h3>Projet 1 : Réseaux VPN</h3>
                         </div>
                     </div>
+                    <div class="mission-content">
+                        <a class="doc-download-btn"
+                           href="https://docs.google.com/document/d/1wpku2D1cA8AzdSmTrgNafQELhJSgwZTR/edit?usp=sharing&ouid=104823724867564394819&rtpof=true&sd=true"
+                           target="_blank">
+                            📄 Voir la procédure VPN
+                        </a>
+                    </div>
                 </article>
 
                 <article class="mission-card">
@@ -47,7 +79,13 @@
                             <h3>Projet 2 : System GLPI</h3>
                         </div>
                     </div>
-                
+                    <div class="mission-content">
+                        <a class="doc-download-btn"
+                           href="https://docs.google.com/document/d/1_XCVGjGD_JUdnvCHqw3g5MZ4qu1TRaZh/edit?usp=sharing&ouid=104823724867564394819&rtpof=true&sd=true"
+                           target="_blank">
+                            📄 Voir la procédure GLPI
+                        </a>
+                    </div>
                 </article>
 
             </div>
@@ -58,12 +96,3 @@
     <script src="../script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
