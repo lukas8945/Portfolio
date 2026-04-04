@@ -379,7 +379,7 @@ section:nth-child(even) {
 }
 
 .objectifs-list li::before {
-    content: "â–¸";
+    content: "▸";
     position: absolute;
     left: 0;
     color: var(--primary-color);
@@ -801,7 +801,7 @@ section:nth-child(even) {
 }
 
 .article-content-veille ul li::before {
-    content: "â€¢";
+    content: "•";
     position: absolute;
     left: 0;
     color: var(--primary-color);
