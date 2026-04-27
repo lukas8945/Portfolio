@@ -1,29 +1,26 @@
-﻿// Smooth scrolling for navigation links
+// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const targetSelector = this.getAttribute('href');
-        if (!targetSelector || targetSelector === '#') {
-            return;
-        }
+        if (!targetSelector || targetSelector === '#') return;
         const target = document.querySelector(targetSelector);
         if (target) {
             e.preventDefault();
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
 
-// Navigation background change on scroll
+// Navigation background change on scroll (thème clair)
 window.addEventListener('scroll', function () {
     const nav = document.querySelector('nav');
     if (!nav) return;
     if (window.scrollY > 50) {
-        nav.style.background = 'rgba(255, 255, 255, 0.98)';
+        nav.style.background = 'rgba(255, 255, 255, 0.99)';
+        nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
     } else {
-        nav.style.background = 'rgba(255, 255, 255, 0.95)';
+        nav.style.background = 'rgba(255, 255, 255, 0.97)';
+        nav.style.boxShadow = '0 2px 12px rgba(0,0,0,0.08)';
     }
 });
 
@@ -36,11 +33,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // Add animation on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
 const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -50,40 +43,9 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Observe all project cards
 document.querySelectorAll('.project-card').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(card);
 });
-
-// Add typing effect to hero text
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    type();
-}
-
-// Initialize typing effect after page load
-window.addEventListener('load', function() {
-    setTimeout(() => {
-        const heroTitle = document.querySelector('.hero h1');
-        const heroDesc = document.querySelector('.hero p');
-        if (!heroTitle || !heroDesc) {
-            return;
-        }
-        typeWriter(heroTitle, 'Étudiant BTS SIO SISR', 80);
-        setTimeout(() => {
-            typeWriter(heroDesc, 'Passionné par les réseaux et l\'infrastructure informatique', 50);
-        }, 2000);
-    }, 2500);
-});
-
