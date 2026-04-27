@@ -11,7 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navigation background change on scroll (thème clair)
+// Navigation background on scroll (thème clair)
 window.addEventListener('scroll', function () {
     const nav = document.querySelector('nav');
     if (!nav) return;
@@ -32,7 +32,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     }
 });
 
-// Add animation on scroll
+// Animation on scroll
 const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
 const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
