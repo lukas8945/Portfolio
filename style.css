@@ -8,13 +8,13 @@
     --primary-color: #3b82f6;
     --secondary-color: #60a5fa;
     --accent-color: #818cf8;
-    --dark-bg: #f1f5f9;
-    --darker-bg: #e2e8f0;
-    --card-bg: #ffffff;
-    --card-hover: #f8fafc;
-    --text-color: #0f172a;
-    --text-secondary: #475569;
-    --border-color: #cbd5e1;
+    --dark-bg: #0f172a;
+    --darker-bg: #020617;
+    --card-bg: #1e293b;
+    --card-hover: #334155;
+    --text-color: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
     --success-color: #10b981;
     --warning-color: #f59e0b;
     --danger-color: #ef4444;
@@ -36,7 +36,7 @@ body {
 
 /* Navigation */
 nav {
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid var(--border-color);
@@ -115,7 +115,7 @@ nav {
     color: var(--text-color);
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
 
 .hero::before {
