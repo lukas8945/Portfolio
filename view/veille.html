@@ -3,98 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veille Technologique - SSO | Lucas DOYEN-HERVE</title>
-    <link rel="stylesheet" href="../style.css"> 
-    
-    <style>
-        /* Styles spécifiques pour rendre la lecture de la veille agréable */
-        .veille-container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
-        .card-veille {
-            background: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border-left: 5px solid #0056b3; /* Rappel couleur SISR */
-        }
-        .card-veille h2 {
-            margin-top: 0;
-            color: #0056b3;
-        }
-        .tag {
-            display: inline-block;
-            background: #e1ecf4;
-            color: #39739d;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.85em;
-            margin-right: 5px;
-        }
-    </style>
+    <title>Veille Technologique | Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-
-    <header>
-        <nav>
+    
+    <nav>
+        <div class="nav-container">
             <div class="logo">Portfolio</div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="missions.html">Fiches Missions</a></li>
                 <li><a href="projets.html">Projets</a></li>
-                <li><a href="veille.html" class="active">Veille</a></li>
+                <li><a href="veille.html">Veille</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main class="veille-container">
-        <header style="text-align: center; margin-bottom: 40px;">
-            <h1>Veille Technologique</h1>
-            <p>Sujet : <strong>Le Single Sign-On (SSO)</strong></p>
-            <div>
-                <span class="tag">Cybersécurité</span>
-                <span class="tag">Gestion des identités</span>
-                <span class="tag">SISR</span>
+    <main>
+        <section id="veille">
+            <div class="container">
+                <h2 class="section-title">Veille Technologique</h2>
+                <p class="section-intro">Sujet : Le Single Sign-On (SSO) - L'authentification centralisée.</p>
+
+                <div class="missions-grid">
+
+                    <article class="mission-card">
+                        <div class="mission-header">
+                            <div class="mission-icon">1</div>
+                            <div>
+                                <h3>Présentation du sujet</h3>
+                                <p class="mission-type">Définition</p>
+                            </div>
+                        </div>
+                        <div class="mission-content">
+                            <div class="mission-section">
+                                <p class="mission-description">Le SSO (Single Sign-On) est un système d'authentification qui permet à un utilisateur d'accéder à plusieurs applications informatiques en ne procédant qu'à une seule authentification. Dans mon entreprise, cette solution est cruciale pour simplifier l'expérience utilisateur tout en sécurisant les accès.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="mission-card">
+                        <div class="mission-header">
+                            <div class="mission-icon">2</div>
+                            <div>
+                                <h3>Fonctionnement Technique</h3>
+                                <p class="mission-type">Protocoles et flux</p>
+                            </div>
+                        </div>
+                        <div class="mission-content">
+                            <div class="mission-section">
+                                <p class="mission-description">Le flux repose sur l'échange de jetons (Tokens) entre un Fournisseur d'Identité (IdP), comme Microsoft Entra ID ou Okta, et les Fournisseurs de Services (SP).</p>
+                            </div>
+                            <div class="mission-section">
+                                <ul class="objectifs-list">
+                                    <li><strong>SAML 2.0 :</strong> Utilisé principalement pour les applications lourdes ou métiers.</li>
+                                    <li><strong>OpenID Connect :</strong> Utilisé principalement pour les applications Web modernes.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="mission-card">
+                        <div class="mission-header">
+                            <div class="mission-icon">3</div>
+                            <div>
+                                <h3>Analyse pour le BTS SISR</h3>
+                                <p class="mission-type">Avantages et Risques</p>
+                            </div>
+                        </div>
+                        <div class="mission-content">
+                            <div class="mission-section">
+                                <ul class="objectifs-list">
+                                    <li><strong>Avantages :</strong> Centralisation des comptes, réduction des appels au support pour mots de passe oubliés, application du MFA (Multi-Factor Authentication) sur un point d'entrée unique.</li>
+                                    <li><strong>Risques :</strong> "Single Point of Failure" (si le serveur central SSO tombe en panne, tout est bloqué) et nécessité absolue de sécuriser drastiquement le compte maître de l'utilisateur.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="mission-card">
+                        <div class="mission-header">
+                            <div class="mission-icon">4</div>
+                            <div>
+                                <h3>Sources de veille</h3>
+                                <p class="mission-type">Outils utilisés</p>
+                            </div>
+                        </div>
+                        <div class="mission-content">
+                            <div class="mission-section">
+                                <ul class="objectifs-list">
+                                    <li><strong>Flux RSS :</strong> Cert-FR (ANSSI), Le Monde Informatique.</li>
+                                    <li><strong>Newsletters :</strong> ZDNet Sécurité.</li>
+                                    <li><strong>Outil de centralisation :</strong> Feedly.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
             </div>
-        </header>
-
-        <section class="card-veille">
-            <h2>Présentation du sujet</h2>
-            <p>Le SSO est un système d'authentification qui permet à un utilisateur d'accéder à plusieurs applications informatiques en ne procédant qu'à une seule authentification. Dans mon entreprise, cette solution est cruciale pour simplifier l'expérience utilisateur tout en sécurisant les accès.</p>
-        </section>
-
-        <section class="card-veille">
-            <h2>Fonctionnement Technique</h2>
-            <p>Le flux repose sur l'échange de jetons (Tokens) entre un <strong>Fournisseur d'Identité (IdP)</strong>, comme Microsoft Entra ID ou Okta, et les <strong>Fournisseurs de Services (SP)</strong>.</p>
-            <ul>
-                <li><strong>SAML 2.0 :</strong> Utilisé pour les applications lourdes ou métiers.</li>
-                <li><strong>OpenID Connect :</strong> Utilisé pour les applications Web modernes.</li>
-            </ul>
-        </section>
-
-        <section class="card-veille">
-            <h2>Analyse pour le BTS SISR</h2>
-            <p><strong>Avantages :</strong> Centralisation des comptes, réduction des appels au support pour mots de passe oubliés, application du MFA (Multi-Factor Authentication) sur un point unique.</p>
-            <p><strong>Risques :</strong> "Single Point of Failure" (si le serveur SSO tombe, tout est bloqué) et nécessité de sécuriser drastiquement le compte maître.</p>
-        </section>
-
-        <section class="card-veille">
-            <h2>Sources de veille</h2>
-            <ul>
-                <li><strong>Flux RSS :</strong> Cert-FR (ANSSI), Le Monde Informatique.</li>
-                <li><strong>Newsletters :</strong> ZDNet Sécurité.</li>
-                <li><strong>Outil de centralisation :</strong> Feedly.</li>
-            </ul>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024-2025 - Lucas DOYEN-HERVE</p>
-    </footer>
-
+    <script src="../script.js"></script>
 </body>
 </html>
