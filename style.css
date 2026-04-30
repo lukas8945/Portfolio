@@ -525,54 +525,35 @@ section:nth-child(even) {
     text-align: center;
 }
 
-.veille-methodo-grid { display: grid; gap: 2rem; }
-
-.methodo-card {
-    background: var(--darker-bg);
-    padding: 2rem;
-    border-radius: 12px;
-    border-left: 4px solid var(--primary-color);
+.veille-methodo-grid {
+    display: grid;
+    gap: 2rem;
 }
-
-.methodo-card.full-width { grid-column: 1 / -1; }
-.methodo-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-
-.methodo-card h4 {
-    color: var(--primary-color);
+ 
+.veille-methodo-grid > h4 {
     margin-bottom: 1rem;
-    font-size: 1.3rem;
+    color: var(--primary-color);
 }
-
-.methodo-card p, .methodo-card ul li {
-    color: var(--text-secondary);
-    line-height: 1.8;
-}
-
+ 
 .sources-methodo {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
 }
-
-.source-type {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+ 
+.source-type,
+.outil-item,
+.methodo-card {
+    margin-bottom: 1.5rem;
 }
-
-.source-type h5 { color: var(--secondary-color); margin-bottom: 1rem; }
-.source-type ul { list-style: none; padding-left: 0; }
-.source-type ul li { padding: 0.5rem 0; color: var(--text-secondary); }
-.source-type ul li strong { color: var(--text-color); }
-
+ 
 .outils-veille {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-}
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 
 .outil-item {
     background: var(--card-bg);
@@ -638,9 +619,9 @@ section:nth-child(even) {
 }
 
 .articles-grid-veille {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
 .article-card-veille {
@@ -769,5 +750,10 @@ section:nth-child(even) {
     .hero h1 { font-size: 2.5rem; }
     .hero h2 { font-size: 1.5rem; }
     .nav-links { gap: 0.8rem; }
-    .articles-grid-veille { grid-template-columns: 1fr; }
+ 
+    .sources-methodo,
+    .outils-veille,
+    .articles-grid-veille {
+        grid-template-columns: 1fr;
+    }
 }
