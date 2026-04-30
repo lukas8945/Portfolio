@@ -3,268 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veille Technologique | Portfolio</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Veille Technologique - SSO | Portfolio Lucas DOYEN-HERVE</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    
+    <style>
+        /* Quelques styles de base si vous n'avez pas encore mis en forme cette page. 
+           Vous pouvez les supprimer si votre style.css gère déjà tout ça. */
+        .veille-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .veille-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .veille-section {
+            background: #f9f9f9;
+            border-left: 4px solid #0056b3;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        .veille-section h2 {
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .sources-list {
+            list-style-type: square;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
+
+    <header>
+        <nav>
             <div class="logo">Portfolio</div>
-            <ul class="nav-links">
+            <ul>
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="missions.html">Fiches Missions</a></li>
                 <li><a href="projets.html">Projets</a></li>
-                <li><a href="veille.html">Veille</a></li>
+                <li><a href="veille.html" class="active">Veille</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <main class="veille-container">
+        <div class="veille-header">
+            <h1>Ma Veille Technologique</h1>
+            <p><strong>Thème :</strong> Le Single Sign-On (SSO) - L'authentification centralisée en entreprise</p>
         </div>
-    </nav>
 
-    <main>
-    <section id="veille">
-        <div class="container">
-            <h2 class="section-title">Veille Technologique</h2>
-            <p class="section-intro">Thématique : La vente et l'exploitation des données personnelles par les GAFAM</p>
+        <section class="veille-section">
+            <h2>1. Qu'est-ce que le SSO ?</h2>
+            <p>Le <strong>SSO (Single Sign-On)</strong>, ou authentification unique, est une méthode d'accès sécurisé permettant à un utilisateur de s'authentifier une seule fois avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). Une fois connecté, l'utilisateur peut accéder à de multiples applications ou services liés sans avoir à se reconnecter.</p>
+        </section>
 
-            <div class="veille-explication">
-                <h3>📡 Ma méthodologie de veille</h3>
-                <div class="veille-methodo-grid">
+        <section class="veille-section">
+            <h2>2. Fonctionnement technique</h2>
+            <p>Le système repose sur une relation de confiance entre le fournisseur d'identité (IdP) et le fournisseur de services (SP). Les protocoles les plus utilisés sont :</p>
+            <ul>
+                <li><strong>SAML 2.0 :</strong> Standard très utilisé en entreprise (B2B) pour l'échange de données d'authentification.</li>
+                <li><strong>OAuth 2.0 / OpenID Connect :</strong> Souvent utilisé pour les applications web modernes et mobiles (B2C et B2B).</li>
+            </ul>
+            <p><em>Exemple de fonctionnement :</em> Le serveur génère un jeton (token) chiffré qui est transmis aux applications, prouvant que l'utilisateur a déjà été vérifié.</p>
+        </section>
 
-                        <h4>2. Sources d'information</h4>
-                        <div class="sources-methodo">
-                            <div class="source-type">
-                                <h5>Sites spécialisés</h5>
-                                <ul>
-                                    <li><strong>CNIL</strong> — Commission Nationale Informatique et Libertés</li>
-                                    <li><strong>ANSSI</strong> — Agence nationale de sécurité</li>
-                                    <li><strong>LeMonde.fr</strong> — Rubrique Pixels</li>
-                                    <li><strong>NextINpact</strong> — Actualité numérique</li>
-                                </ul>
-                            </div>
-                            <div class="source-type">
-                                <h5>Réseaux & Médias</h5>
-                                <ul>
-                                    <li><strong>LinkedIn</strong> — Experts RGPD et cybersécurité</li>
-                                    <li><strong>Reddit</strong> — r/privacy, r/netsec</li>
-                                </ul>
-                            </div>
-                            <div class="source-type">
-                                <h5>Newsletters</h5>
-                                <ul>
-                                    <li><strong>The Markup</strong> — Enquêtes data & Big Tech</li>
-                                    <li><strong>Politico Tech</strong> — Régulation numérique UE</li>
-                                    <li><strong>Electronic Frontier Foundation</strong></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+        <section class="veille-section">
+            <h2>3. Enjeux et avantages pour le service SISR</h2>
+            <ul>
+                <li><strong>Sécurité renforcée :</strong> Réduction de la "fatigue des mots de passe". Moins de risque de mots de passe notés sur des post-its. Facilite le déploiement du MFA (Multi-Factor Authentication).</li>
+                <li><strong>Gain de temps pour le support :</strong> Diminution drastique des tickets Helpdesk liés aux réinitialisations de mots de passe oubliés.</li>
+                <li><strong>Gestion centralisée (Onboarding / Offboarding) :</strong> L'ajout ou la suppression d'un collaborateur dans l'Active Directory désactive instantanément tous ses accès applicatifs.</li>
+            </ul>
+        </section>
 
-                    <div class="methodo-card">
-                        <h4>3. Outils utilisés</h4>
-                        <div class="outils-veille">
-                            <div class="outil-item">
-                                <strong>Feedly</strong>
-                                <p>Agrégateur RSS pour centraliser mes flux d'actualités</p>
-                            </div>
-                            <div class="outil-item">
-                                <strong>Google Alerts</strong>
-                                <p>Alertes sur mots-clés : RGPD, GAFAM, data broker</p>
-                            </div>
-                            <div class="outil-item">
-                                <strong>Pocket</strong>
-                                <p>Sauvegarde des articles pour lecture approfondie</p>
-                            </div>
-                            <div class="outil-item">
-                                <strong>Notion</strong>
-                                <p>Synthèse et organisation de mes notes de veille</p>
-                            </div>
-                        </div>
-                    </div>
+        <section class="veille-section">
+            <h2>4. Limites et points de vigilance</h2>
+            <ul>
+                <li><strong>Single Point of Failure (SPOF) :</strong> Si le serveur d'authentification central est en panne, aucun utilisateur ne peut accéder aux applications.</li>
+                <li><strong>Risque d'usurpation majeur :</strong> Si un pirate parvient à compromettre l'identifiant principal (le mot de passe maître), il obtient les clés de tout le système d'information.</li>
+            </ul>
+        </section>
 
-                    <div class="methodo-card full-width">
-                        <h4>4. Pourquoi ce sujet en lien avec le BTS SIO SISR ?</h4>
-                        <ul class="applications-list">
-                            <li>Comprendre les enjeux liés à la <strong>protection des données en entreprise</strong></li>
-                            <li>Connaître les obligations légales du <strong>RGPD</strong> applicables aux infrastructures</li>
-                            <li>Anticiper les risques liés aux <strong>services cloud</strong> des GAFAM utilisés en entreprise</li>
-                            <li>Sensibiliser les utilisateurs aux <strong>bonnes pratiques numériques</strong></li>
-                            <li>Comprendre comment configurer des <strong>réseaux et pare-feux</strong> pour limiter les fuites de données</li>
-                        </ul>
-                    </div>
+        <section class="veille-section">
+            <h2>5. Mes Outils et Sources de Veille</h2>
+            <p>Pour me tenir informé des évolutions sur l'authentification et l'Identity and Access Management (IAM), j'utilise les sources suivantes :</p>
+            <ul class="sources-list">
+                <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)</a> - Bonnes pratiques.</li>
+                <li><a href="https://www.lemondeinformatique.fr/securite/" target="_blank">Le Monde Informatique (Rubrique Cybersécurité)</a> - Actualités B2B.</li>
+                <li>Articles techniques sur les solutions du marché (Microsoft Entra ID, Okta, Keycloak).</li>
+                <li>Flux RSS via <em>Feedly</em> ou alertes Google sur des mots-clés clés (MFA, Passkeys, OAuth2).</li>
+            </ul>
+        </section>
 
-                </div>
-            </div>
-
-            <div class="veille-articles-section">
-                <h3>📰 Articles analysés</h3>
-                <div class="articles-grid-veille">
-
-                    <!-- Article 1 -->
-                    <div class="article-card-veille">
-                        <div class="article-header-veille">
-                            <span class="article-date">Janvier 2025</span>
-                            <span class="article-source-badge">Meta / DPC</span>
-                        </div>
-                        <h4>Meta condamnée à 251 millions d'euros pour la fuite de données Facebook de 2018</h4>
-                        <p class="article-source-detail">Source : Commission irlandaise de protection des données (DPC)</p>
-                        <div class="article-content-veille">
-                            <h5>📋 Résumé</h5>
-                            <p>
-                                En janvier 2025, la Commission irlandaise de protection des données a infligé à Meta une amende
-                                de 251 millions d'euros suite à la faille de sécurité de 2018 qui avait exposé les données
-                                de près de 29 millions de comptes Facebook dans le monde. La faille exploitait la fonctionnalité
-                                "Afficher en tant que" pour voler des tokens d'accès.
-                            </p>
-                            <h5>🔑 Points clés</h5>
-                            <ul>
-                                <li>29 millions de comptes compromis (données : téléphone, email, localisation)</li>
-                                <li>Violation des articles 25 et 32 du RGPD (sécurité et protection by design)</li>
-                                <li>Amende de 251 M€ répartie sur deux infractions distinctes</li>
-                                <li>Meta avait tardé plus de 2 mois avant de notifier les autorités</li>
-                            </ul>
-                            <h5>💡 Ce que j'en retiens</h5>
-                            <p>
-                                Cette affaire illustre que même les géants du numérique sont soumis au RGPD et peuvent être
-                                sanctionnés lourdement. Pour un technicien SISR, cela rappelle l'importance de la notification
-                                rapide des incidents et de la sécurité dès la conception des systèmes.
-                            </p>
-                            <h5>🛠 Application pratique</h5>
-                            <p>
-                                Mise en place de procédures de gestion des incidents, de journaux d'accès et d'une politique
-                                de moindre privilège sur les tokens et API en entreprise.
-                            </p>
-                        </div>
-                        <div class="article-footer-veille">
-                            <a href="https://www.dataprotection.ie/" target="_blank" class="article-link-btn">Lire l'article original →</a>
-                        </div>
-                    </div>
-
-                    <!-- Article 2 -->
-                    <div class="article-card-veille">
-                        <div class="article-header-veille">
-                            <span class="article-date">2023 – 2024</span>
-                            <span class="article-source-badge">Google</span>
-                        </div>
-                        <h4>Google et le courtage de données : ce que le moteur de recherche sait vraiment de vous</h4>
-                        <p class="article-source-detail">Source : The Markup / Electronic Frontier Foundation</p>
-                        <div class="article-content-veille">
-                            <h5>📋 Résumé</h5>
-                            <p>
-                                Des investigations ont mis en lumière l'étendue du profilage publicitaire de Google.
-                                Via ses services (Search, Maps, YouTube, Android), Google collecte des milliers de points
-                                de données par utilisateur et les revend à des régies publicitaires.
-                            </p>
-                            <h5>🔑 Points clés</h5>
-                            <ul>
-                                <li>Plus de 80% des revenus de Google proviennent de la publicité ciblée</li>
-                                <li>Les data brokers revendent ces profils à des tiers sans consentement explicite</li>
-                                <li>Même en navigation privée, des données de session sont collectées côté serveur</li>
-                                <li>L'UE a imposé à Google des modifications via le Digital Markets Act (DMA)</li>
-                            </ul>
-                            <h5>💡 Ce que j'en retiens</h5>
-                            <p>
-                                Les services Google sont omniprésents en entreprise. Il est essentiel de comprendre
-                                quelles données transitent vers leurs serveurs et comment limiter cette exposition
-                                via des politiques de configuration réseau.
-                            </p>
-                            <h5>🛠 Application pratique</h5>
-                            <p>
-                                Mise en place de règles de filtrage DNS (Pi-hole, NextDNS) pour bloquer les trackers
-                                et sensibilisation des collaborateurs aux alternatives respectueuses de la vie privée.
-                            </p>
-                        </div>
-                        <div class="article-footer-veille">
-                            <a href="https://themarkup.org/" target="_blank" class="article-link-btn">Lire l'article original →</a>
-                        </div>
-                    </div>
-
-                    <!-- Article 3 -->
-                    <div class="article-card-veille">
-                        <div class="article-header-veille">
-                            <span class="article-date">2024</span>
-                            <span class="article-source-badge">Amazon / CNIL</span>
-                        </div>
-                        <h4>Amazon condamné à 32 millions d'euros pour surveillance excessive de ses salariés</h4>
-                        <p class="article-source-detail">Source : CNIL — Délibération publiée en 2024</p>
-                        <div class="article-content-veille">
-                            <h5>📋 Résumé</h5>
-                            <p>
-                                La CNIL a sanctionné Amazon France Logistique d'une amende de 32 millions d'euros.
-                                Le géant du e-commerce collectait des données ultra-précises sur la productivité de ses
-                                entrepôts via des scanners portables, mesurant chaque geste des salariés de façon jugée
-                                illicite au regard du RGPD.
-                            </p>
-                            <h5>🔑 Points clés</h5>
-                            <ul>
-                                <li>Indicateurs de productivité mesurés à la seconde (temps de pause inclus)</li>
-                                <li>Conservation des données pendant 31 jours sans base légale suffisante</li>
-                                <li>Violation du principe de minimisation des données (article 5 RGPD)</li>
-                                <li>Amende la plus élevée infligée par la CNIL à cette date</li>
-                            </ul>
-                            <h5>💡 Ce que j'en retiens</h5>
-                            <p>
-                                La collecte de données ne concerne pas seulement les clients — elle touche aussi les
-                                employés. En tant que futur technicien, je dois connaître les limites légales des outils
-                                de supervision et de monitoring des postes de travail.
-                            </p>
-                            <h5>🛠 Application pratique</h5>
-                            <p>
-                                Lors du déploiement d'outils de supervision réseau ou d'Active Directory, veiller à ce
-                                que les logs collectés soient proportionnés, documentés et conformes au RGPD.
-                            </p>
-                        </div>
-                        <div class="article-footer-veille">
-                            <a href="https://www.cnil.fr/fr/amazon-france-logistique-sanctionnee-32-millions-deuros" target="_blank" class="article-link-btn">Lire l'article original →</a>
-                        </div>
-                    </div>
-
-                    <!-- Article 4 -->
-                    <div class="article-card-veille">
-                        <div class="article-header-veille">
-                            <span class="article-date">2024 – 2025</span>
-                            <span class="article-source-badge">UE / DMA</span>
-                        </div>
-                        <h4>Digital Markets Act : l'Europe contraint les GAFAM à plus de transparence sur les données</h4>
-                        <p class="article-source-detail">Source : Commission Européenne / Politico Tech</p>
-                        <div class="article-content-veille">
-                            <h5>📋 Résumé</h5>
-                            <p>
-                                Entré en vigueur en mars 2024, le Digital Markets Act impose aux grandes plateformes
-                                désignées "gatekeepers" de nouvelles obligations : interopérabilité, interdiction du
-                                croisement de données entre services sans consentement, et transparence sur les algorithmes.
-                                Google, Meta, Apple, Amazon et Microsoft sont directement concernés.
-                            </p>
-                            <h5>🔑 Points clés</h5>
-                            <ul>
-                                <li>6 gatekeepers désignés : Alphabet, Apple, Meta, Amazon, Microsoft, ByteDance</li>
-                                <li>Interdiction de combiner données personnelles entre services sans consentement</li>
-                                <li>Amendes pouvant atteindre 10% du chiffre d'affaires mondial</li>
-                                <li>Enquêtes ouvertes contre Apple, Meta et Alphabet dès les premiers mois</li>
-                            </ul>
-                            <h5>💡 Ce que j'en retiens</h5>
-                            <p>
-                                Le cadre réglementaire européen évolue rapidement et contraint les GAFAM à revoir leurs
-                                modèles basés sur la donnée. Pour les entreprises utilisant ces services, cela ouvre
-                                la voie à plus de contrôle sur leurs données hébergées dans le cloud.
-                            </p>
-                            <h5>🛠 Application pratique</h5>
-                            <p>
-                                Lors du choix d'une solution cloud (Microsoft 365, Google Workspace, AWS), il est
-                                essentiel de vérifier les clauses de traitement des données et les options de portabilité
-                                pour rester conformes au RGPD et au DMA.
-                            </p>
-                        </div>
-                        <div class="article-footer-veille">
-                            <a href="https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/europe-fit-digital-age/digital-markets-act_fr" target="_blank" class="article-link-btn">Lire l'article original →</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
     </main>
 
-    <script src="../script.js"></script>
+    <footer>
+        <p>&copy; 2024-2025 - Lucas DOYEN-HERVE | BTS SIO Option SISR</p>
+    </footer>
+
 </body>
 </html>
