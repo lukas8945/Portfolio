@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veille Technologique - SSO | Portfolio Lucas DOYEN-HERVE</title>
-    <link rel="stylesheet" href="../css/style.css"> 
+    <title>Veille Technologique - SSO | Lucas DOYEN-HERVE</title>
+    <link rel="stylesheet" href="../style.css"> 
     
     <style>
-        /* Quelques styles de base si vous n'avez pas encore mis en forme cette page. 
-           Vous pouvez les supprimer si votre style.css gère déjà tout ça. */
+        /* Styles spécifiques pour rendre la lecture de la veille agréable */
         .veille-container {
             max-width: 900px;
-            margin: 0 auto;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        .card-veille {
+            background: #fff;
+            border-radius: 8px;
             padding: 20px;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-left: 5px solid #0056b3; /* Rappel couleur SISR */
         }
-        .veille-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .veille-section {
-            background: #f9f9f9;
-            border-left: 4px solid #0056b3;
-            padding: 15px 20px;
-            margin-bottom: 25px;
-            border-radius: 4px;
-        }
-        .veille-section h2 {
-            color: #0056b3;
+        .card-veille h2 {
             margin-top: 0;
+            color: #0056b3;
         }
-        .sources-list {
-            list-style-type: square;
+        .tag {
+            display: inline-block;
+            background: #e1ecf4;
+            color: #39739d;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -52,58 +52,48 @@
     </header>
 
     <main class="veille-container">
-        <div class="veille-header">
-            <h1>Ma Veille Technologique</h1>
-            <p><strong>Thème :</strong> Le Single Sign-On (SSO) - L'authentification centralisée en entreprise</p>
-        </div>
+        <header style="text-align: center; margin-bottom: 40px;">
+            <h1>Veille Technologique</h1>
+            <p>Sujet : <strong>Le Single Sign-On (SSO)</strong></p>
+            <div>
+                <span class="tag">Cybersécurité</span>
+                <span class="tag">Gestion des identités</span>
+                <span class="tag">SISR</span>
+            </div>
+        </header>
 
-        <section class="veille-section">
-            <h2>1. Qu'est-ce que le SSO ?</h2>
-            <p>Le <strong>SSO (Single Sign-On)</strong>, ou authentification unique, est une méthode d'accès sécurisé permettant à un utilisateur de s'authentifier une seule fois avec un seul jeu d'identifiants (nom d'utilisateur et mot de passe). Une fois connecté, l'utilisateur peut accéder à de multiples applications ou services liés sans avoir à se reconnecter.</p>
+        <section class="card-veille">
+            <h2>Présentation du sujet</h2>
+            <p>Le SSO est un système d'authentification qui permet à un utilisateur d'accéder à plusieurs applications informatiques en ne procédant qu'à une seule authentification. Dans mon entreprise, cette solution est cruciale pour simplifier l'expérience utilisateur tout en sécurisant les accès.</p>
         </section>
 
-        <section class="veille-section">
-            <h2>2. Fonctionnement technique</h2>
-            <p>Le système repose sur une relation de confiance entre le fournisseur d'identité (IdP) et le fournisseur de services (SP). Les protocoles les plus utilisés sont :</p>
+        <section class="card-veille">
+            <h2>Fonctionnement Technique</h2>
+            <p>Le flux repose sur l'échange de jetons (Tokens) entre un <strong>Fournisseur d'Identité (IdP)</strong>, comme Microsoft Entra ID ou Okta, et les <strong>Fournisseurs de Services (SP)</strong>.</p>
             <ul>
-                <li><strong>SAML 2.0 :</strong> Standard très utilisé en entreprise (B2B) pour l'échange de données d'authentification.</li>
-                <li><strong>OAuth 2.0 / OpenID Connect :</strong> Souvent utilisé pour les applications web modernes et mobiles (B2C et B2B).</li>
+                <li><strong>SAML 2.0 :</strong> Utilisé pour les applications lourdes ou métiers.</li>
+                <li><strong>OpenID Connect :</strong> Utilisé pour les applications Web modernes.</li>
             </ul>
-            <p><em>Exemple de fonctionnement :</em> Le serveur génère un jeton (token) chiffré qui est transmis aux applications, prouvant que l'utilisateur a déjà été vérifié.</p>
         </section>
 
-        <section class="veille-section">
-            <h2>3. Enjeux et avantages pour le service SISR</h2>
+        <section class="card-veille">
+            <h2>Analyse pour le BTS SISR</h2>
+            <p><strong>Avantages :</strong> Centralisation des comptes, réduction des appels au support pour mots de passe oubliés, application du MFA (Multi-Factor Authentication) sur un point unique.</p>
+            <p><strong>Risques :</strong> "Single Point of Failure" (si le serveur SSO tombe, tout est bloqué) et nécessité de sécuriser drastiquement le compte maître.</p>
+        </section>
+
+        <section class="card-veille">
+            <h2>Sources de veille</h2>
             <ul>
-                <li><strong>Sécurité renforcée :</strong> Réduction de la "fatigue des mots de passe". Moins de risque de mots de passe notés sur des post-its. Facilite le déploiement du MFA (Multi-Factor Authentication).</li>
-                <li><strong>Gain de temps pour le support :</strong> Diminution drastique des tickets Helpdesk liés aux réinitialisations de mots de passe oubliés.</li>
-                <li><strong>Gestion centralisée (Onboarding / Offboarding) :</strong> L'ajout ou la suppression d'un collaborateur dans l'Active Directory désactive instantanément tous ses accès applicatifs.</li>
+                <li><strong>Flux RSS :</strong> Cert-FR (ANSSI), Le Monde Informatique.</li>
+                <li><strong>Newsletters :</strong> ZDNet Sécurité.</li>
+                <li><strong>Outil de centralisation :</strong> Feedly.</li>
             </ul>
         </section>
-
-        <section class="veille-section">
-            <h2>4. Limites et points de vigilance</h2>
-            <ul>
-                <li><strong>Single Point of Failure (SPOF) :</strong> Si le serveur d'authentification central est en panne, aucun utilisateur ne peut accéder aux applications.</li>
-                <li><strong>Risque d'usurpation majeur :</strong> Si un pirate parvient à compromettre l'identifiant principal (le mot de passe maître), il obtient les clés de tout le système d'information.</li>
-            </ul>
-        </section>
-
-        <section class="veille-section">
-            <h2>5. Mes Outils et Sources de Veille</h2>
-            <p>Pour me tenir informé des évolutions sur l'authentification et l'Identity and Access Management (IAM), j'utilise les sources suivantes :</p>
-            <ul class="sources-list">
-                <li><a href="https://www.ssi.gouv.fr/" target="_blank">ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)</a> - Bonnes pratiques.</li>
-                <li><a href="https://www.lemondeinformatique.fr/securite/" target="_blank">Le Monde Informatique (Rubrique Cybersécurité)</a> - Actualités B2B.</li>
-                <li>Articles techniques sur les solutions du marché (Microsoft Entra ID, Okta, Keycloak).</li>
-                <li>Flux RSS via <em>Feedly</em> ou alertes Google sur des mots-clés clés (MFA, Passkeys, OAuth2).</li>
-            </ul>
-        </section>
-
     </main>
 
     <footer>
-        <p>&copy; 2024-2025 - Lucas DOYEN-HERVE | BTS SIO Option SISR</p>
+        <p>&copy; 2024-2025 - Lucas DOYEN-HERVE</p>
     </footer>
 
 </body>
