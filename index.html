@@ -3,40 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Fiches Missions | Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <div class="logo">Portfolio</div>
             <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="view/missions.html">Fiches Missions</a></li>
-                <li><a href="view/projets.html">Projets</a></li>
-                <li><a href="view/veille.html">Veille</a></li>
-                <li><a href="view/contact.html">Contact</a></li>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="missions.html">Fiches Missions</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="veille.html">Veille</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
-    <section id="accueil" class="hero page-garde">
-        <div class="hero-content">
-            <div class="page-garde-logo">LD</div>
-            <h1>Portfolio Professionnel</h1>
-            <div class="hero-divider"></div>
-            <h2>Lucas DOYEN-HERVE</h2>
-            <p>BTS Services Informatiques aux Organisations</p>
-            <p class="hero-subtitle">Option SISR - Solutions d'Infrastructure, Systèmes et Réseaux</p>
-            <div class="hero-divider"></div>
-            <p class="annee-scolaire">Année 2024-2025</p>
-            <p class="epreuve">Épreuve E4 - Support et mise à disposition de services informatiques</p>
-            <a href="view/missions.html" class="cta-button">Consulter le portfolio</a>
+    <section id="missions">
+        <div class="container">
+            <h2 class="section-title">Épreuve E5 · Parcours de professionnalisation</h2>
+            <p class="section-intro">Projets Personnalisés Encadrés réalisés en formation et en entreprise.</p>
+
+            <div class="placeholder-card">
+                <p>Cliquez sur le nom des travaux pratiques souhaité pour l'ouvrir !</p>
+            </div>
+
+            <div class="missions-grid">
+
+                <article class="mission-card">
+                    <div class="mission-header">
+                        <div class="mission-icon">E5</div>
+                        <div>
+                            <h3>En formation</h3>
+                            <p class="mission-type">Projets Personnalisés Encadrés</p>
+                        </div>
+                    </div>
+                    <div class="mission-content">
+                        <div class="mission-section">
+                            <h4>Travaux pratiques disponibles</h4>
+                            <ul class="objectifs-list">
+                                <li><a target="_blank" rel="noreferrer noopener" href="https://d46a378a-de60-458b-b0e7-dbd708e4c69d.filesusr.com/ugd/23d63b_98fb8047dc874ae682ba6bea9347eb66.pdf">1. Architecture et Installation Active Directory</a></li>
+                                <li><a target="_blank" rel="noreferrer noopener" href="https://d46a378a-de60-458b-b0e7-dbd708e4c69d.filesusr.com/ugd/23d63b_40fa10f89461417da5a7717bfd61fcc9.pdf">2. Installation de routeur sur une machine virtuelle</a></li>
+                                <li><a target="_blank" rel="noreferrer noopener" href="https://d46a378a-de60-458b-b0e7-dbd708e4c69d.filesusr.com/ugd/23d63b_043fdeef1c264ccaae9bec7b6f7dfe4e.pdf">3. Connexion machine virtuelle et machine hôte</a></li>
+                                <li><a target="_blank" rel="noreferrer noopener" href="https://d46a378a-de60-458b-b0e7-dbd708e4c69d.filesusr.com/ugd/23d63b_564859b83ca54fd090880f1687009a49.pdf">4. Environnement de travail du serveur Linux</a></li>
+                                <li><a target="_blank" rel="noreferrer noopener" href="https://d46a378a-de60-458b-b0e7-dbd708e4c69d.filesusr.com/ugd/23d63b_40ba4df0e1a44df8a84fd03fd9910bcd.pdf">5. Introduction à GLPI et installation</a></li>
+                                <li><a target="_blank" rel="noreferrer noopener" href="https://d46a378a-de60-458b-b0e7-dbd708e4c69d.filesusr.com/ugd/23d63b_274a0c40bfca45939376f2ff85e93bc0.pdf">6. Authentification LDAP</a></li>
+                                <li><a target="_blank" rel="noreferrer noopener" href="https://d46a378a-de60-458b-b0e7-dbd708e4c69d.filesusr.com/ugd/23d63b_b934bff82cac4467a7bafac6c8408f3a.pdf">7. Création et configuration des GPO (stratégies de groupes)</a></li>
+                                <li><a target="_blank" rel="noreferrer noopener" href="https://d46a378a-de60-458b-b0e7-dbd708e4c69d.filesusr.com/ugd/23d63b_320dd0e1fb1543d3804c3c175bbcafb5.pdf">8. Création et gestion des OU (unités organisationnelles)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="mission-card">
+                    <div class="mission-header">
+                        <div class="mission-icon">E5</div>
+                        <div>
+                            <h3>En entreprise</h3>
+                            <p class="mission-type">Collège de Paris</p>
+                        </div>
+                    </div>
+                    <div class="mission-content">
+                        <div class="mission-section">
+                            <h4>Environnement outillé</h4>
+                            <p class="mission-description">Au sein du Collège de Paris, nous utilisons plusieurs outils pour la gestion quotidienne de nos services informatiques :</p>
+                        </div>
+                        <div class="mission-section">
+                            <ul class="objectifs-list">
+                                <li><strong>Zendesk :</strong> pour le traitement et le suivi des tickets de support.</li>
+                                <li><strong>Administration Office 365 :</strong> pour la gestion des équipes sur Microsoft Teams ainsi que l'attribution de droits spécifiques, notamment sur certaines boîtes mail.</li>
+                                <li><strong>3CX :</strong> pour l'attribution de lignes directes téléphoniques à nos collaborateurs.</li>
+                                <li><strong>CoreView :</strong> utilisé par les nouveaux alternants, dans le cadre de notre future migration vers cette plateforme.</li>
+                                <li><strong>Hyperplanning et Edusign :</strong> ces outils permettent à l'équipe pédagogique des différentes écoles de gérer de manière autonome les accès aux comptes étudiants.</li>
+                                <li><strong>SharePoint :</strong> nous y référençons tous nos SDA, et une rubrique y est dédiée à la réinitialisation des mots de passe des comptes étudiants et formateurs.</li>
+                                <li><strong>Assets :</strong> utilisé pour recenser l'ensemble du matériel informatique (PC, téléphones, accessoires, etc.) que nous utilisons en interne ou que nous prêtons aux collaborateurs.</li>
+                                
+                                <li style="margin-top: 20px; list-style-type: none;">
+                                    <strong>📄 Documentation :</strong> 
+                                    <a href="../docs/nom-de-ton-fichier.pdf" target="_blank" rel="noreferrer noopener" style="color: #8bb4f8; text-decoration: underline; font-weight: bold; margin-left: 5px;">
+                                        Consulter la Fiche Mission (PDF)
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
         </div>
     </section>
     </main>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
